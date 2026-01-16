@@ -16,12 +16,25 @@ class Sidebar extends Component
     {
         $this->links = [
             [
-            'label' => 'Dashboard Analitik',
-            'route' => 'home',
-            'is_active' => request()->routeIs('home'),
-            'icon' => ' fas fa-chart-line',
-            'is_dropdown' => false
-            ]
+                'label' => 'Dashboard Analitik',
+                'route' => 'home',
+                'is_active' => request()->routeIs('home'),
+                'icon' => ' fas fa-chart-line',
+                'is_dropdown' => false
+            ],
+            [
+                'label' => 'Master Data',
+                'route' => '#',
+                'is_active' => request()->routeIs('master-data.*'),
+                'icon' => ' fas fa-cloud',
+                'is_dropdown' => true,
+                'items' => [
+                    [
+                        'label' => 'Kategori Produk',
+                        'route' => 'master-data.kategori-produk.index',
+                    ]
+                ]
+            ],
         ];
     }
 

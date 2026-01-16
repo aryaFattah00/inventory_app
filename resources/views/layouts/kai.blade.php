@@ -147,7 +147,7 @@
         <div class="container">
           <div class="page-inner">
             <div class="page-header">
-                <h4 class="page-title">@yield('title','Inventory App')</h4>
+                <h4 class="page-title">@yield('page_title','Inventory App')</h4>
             </div>
             @yield('content')
           </div>
